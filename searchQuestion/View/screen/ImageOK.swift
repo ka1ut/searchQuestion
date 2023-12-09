@@ -1,8 +1,14 @@
-//
-//  ImageOK.swift
-//  searchQuestion
-//
-//  Created by 田中魁 on 2023/12/09.
-//
+import SwiftUI
 
-import Foundation
+struct ImageOK: View{
+    var image : UIImage
+    
+    var body: some View{
+        VStack{
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+            Text("撮影成功！")
+        }
+    }
+}
