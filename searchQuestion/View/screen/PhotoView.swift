@@ -9,8 +9,7 @@ struct PhotoView: View{
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-            }else{
-                Text("写真がありません")
+                    .frame(width: 200)
             }
         }
     }
