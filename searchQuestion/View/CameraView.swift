@@ -4,6 +4,7 @@ import UIKit
 struct CameraView: UIViewControllerRepresentable {
     @Binding var showingCamera: Bool
     @Binding var image: UIImage?
+    @Binding var showImage: Bool
 
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()
@@ -31,6 +32,7 @@ struct CameraView: UIViewControllerRepresentable {
                 parent.image = image
             }
             parent.showingCamera = false
+            parent.showImage = true
         }
 
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
